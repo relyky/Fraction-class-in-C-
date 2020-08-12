@@ -16,16 +16,21 @@ namespace TestFraction
         [STAThread]
         static void Main(string[] args)
         {
-            Fraction fracA = new Fraction(1,3);
-            Fraction fracB = new Fraction(1,4);
+            Fraction fracA = new Fraction(2,3); //<- 2/3
+            Fraction fracB = new Fraction(3,4); //<- 3/4
             Fraction fracS = fracA + fracB;
 
             Console.WriteLine(fracS);
             Console.WriteLine(fracS.ToString());
             Console.WriteLine(fracS.ToDouble());
-            Console.WriteLine(fracA * fracB);
-            Console.WriteLine(fracA / fracB);
             Console.WriteLine(new Fraction(fracS.ToDouble()));
+
+            Console.WriteLine();
+
+            Console.WriteLine($"{fracA} + {fracB} = {fracA + fracB}");
+            Console.WriteLine($"{fracA} - {fracB} = {fracA - fracB}");
+            Console.WriteLine($"{fracA} * {fracB} = {fracA * fracB}");
+            Console.WriteLine($"{fracA} / {fracB} = {fracA / fracB}");
 
             Console.Write("Press any key to continue.");
             Console.ReadKey();
